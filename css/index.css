@@ -1,0 +1,41 @@
+/*@charset "utf-8";*/
+*{margin:0;padding:0;}
+body{background-color:#fff;font-family:微软雅黑,sans-serif;font-size:15px;font-weight:400;color:#9b9b9b;
+	-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+a,a:hover{text-decoration:none;}
+
+/*响应式*/
+/*screen宽度<991px;*/
+/*折叠导航按钮*/
+@media screen  and  (max-width:991px){
+.navbar .navbar-toggler {position: absolute;right: -60px;height: 13px;}
+.navbar .navbar-toggler .menu-lines span,.navbar .navbar-toggler .menu-lines:after,.navbar .navbar-toggler .menu-lines:before{background-color: #1b1a1a;}
+/*点击折叠导航按钮后*/
+.navbar .navbar-collapse{background-color: pink;box-shadow: 0 3px 4px rgba(0,0,0,.07);z-index: 50;padding:15px 0;position: absolute;left: 0;top:100%;width:100%;visibility: hidden;opacity: 0;transition: .3s ease;}
+.navbar .menu-opened.navbar-collapse{opacity: 1;visibility: visible;}
+.navbar .collapse:not(.show){display: block;}
+.navbar .navbar-nav{margin:0!important;}
+.header .navbar .nav-item a{line-height: 35px;padding-left: 15px;width: 100%;}
+.navbar .nav-item a:hover{background-color: #8fd3f6;}
+
+/*官方商城按钮*/
+.navbar-actions a{position: absolute;top:40%;right:90px;}
+
+}
+/*screen宽度<991px样式结束;*/
+
+/*头部导航*/
+.header{position: relative;z-index: 1010;}
+.header .navbar{padding:0;height: 100px;max-height: 100px;background-color: #fff;border-bottom: 1px solid #ededed;}
+.navbar>.container{position: relative;height: 100px;}
+.navbar .navbar-brand{padding: 0;margin:0;line-height: 100px;}
+.navbar .navbar-toggler{padding:0;border:0;border-radius: 0;width: 23px;position: relative;font-size: 1.25rem;line-height: 1;background-color: transparent;}
+.navbar .navbar-toggler .menu-lines{display: inline-block;}
+.navbar .navbar-toggler .menu-lines span{position: absolute;top:0;left: 0;width: 23px;height: 2px;background-color: #1b1a1a;}
+.navbar .navbar-toggler .menu-lines:after,.navbar .navbar-toggler .menu-lines:before{content: " ";position: absolute;top:5px;left:0;width: 23px;height: 2px;display: inline-block;background-color: #1b1a1a;transition: .3s ease;}
+.navbar .navbar-toggler .menu-lines:before{top:10px;}
+.navbar .nav-item a{font-size: 14px;font-weight: 700;display: block;position: relative;line-height: 100px;letter-spacing: .4px;color: #1b1a1a;padding:0 26px;}
+.navbar .nav-item a.active{background-color: #8fd3f6;color: #fff;}
+.navbar .nav-item a:hover{background-color: #8fd3f6;}
+.navbar-actions a{color: #1b1a1a;}
+
